@@ -1,0 +1,61 @@
+    /* HSL */
+    /*
+    $aeroblue: hsla(167%, 100%, 87%, 1);
+    $teagreen: hsla(118%, 100%, 86%, 1);
+    $slimygreen: hsla(123%, 79%, 37%, 1);
+    $aquamarineb: hsla(163%, 83%, 70%, 1);
+    $darkgreen: hsla(108%, 100%, 10%, 1);
+    */
+
+    /* RGB */
+    /*
+    $aeroblue: rgba(191, 255, 241, 1);
+    $teagreen: rgba(185, 255, 183, 1);
+    $slimygreen: rgba(20, 170, 28, 1);
+    $aquamarineb: rgba(116, 242, 206, 1);
+    $darkgreen: rgba(10, 50, 0, 1);
+    */
+
+body{
+    background-color: rgba(185, 255, 183, 1);
+    font-family: sans-serif;
+    
+}
+h1{
+    color: rgb(19, 70, 6);
+}
+
+h2{
+    color: rgb(2, 97, 7);
+}
+
+a {
+    color:rgb(3, 9, 97)
+}
+h4 {
+    font-family: monospace;
+    font-size: large;
+}
+#index{
+    font-family: monospace;
+    font-size: large;
+}
+
+h3{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+#Greetings{
+    text-align: center;
+}
+
+#skills-container-right{
+    float: right;
+    padding-right: 15%;
+}
+
+#skills-container-left{
+    width: 50%;
+    padding-left: 5%;
+    margin-bottom: 50px;
+}
