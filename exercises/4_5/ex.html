@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+
+      <script>
+          console.log(
+          document.querySelector("#elementoOndeVoceEsta")
+          )
+
+        var pai = document.querySelector("#elementoOndeVoceEsta").parentNode
+        pai.style.color = "red";
+        var primeiroFilho = document.querySelector("#elementoOndeVoceEsta").firstElementChild
+        primeiroFilho.innerText = "Warning";
+
+        console.log (
+            document.querySelector("#pai").firstElementChild
+        )
+
+        console.log (
+            document.querySelector("#elementoOndeVoceEsta").previousElementSibling
+        )
+
+        console.log (
+            document.querySelector("#elementoOndeVoceEsta").parentNode.innerText
+        )
+        
+        console.log (
+            document.querySelector("#elementoOndeVoceEsta").parentNode.innerText
+        )
+
+        console.log (
+            document.querySelector("#elementoOndeVoceEsta").nextElementSibling
+        
+        )
+
+        console.log (
+            document.querySelector("#pai").childNodes[5]
+        )
+
+        let sibling = document.createElement("div");
+
+        sibling.id = "irmao"
+
+        document.getElementById("pai").appendChild(sibling);
+
+        console.log (
+            document.querySelector("#pai").childNodes
+        )
+
+        let child = document.createElement("div");
+
+        child.id = "filho"
+
+        let grandchild = document.createElement("div")
+
+        grandchild.id = "neto"
+
+        document.getElementById("elementoOndeVoceEsta").appendChild(child);
+        document.getElementById("primeiroFilhoDoFilho").appendChild(grandchild);
+
+        console.log (
+        document.querySelector("#neto").parentNode.parentNode.nextElementSibling
+        )
+        let primeiro = document.getElementById("pai").childNodes[1]
+        let segundo = document.getElementById("pai").childNodes[5]
+        let terceiro = document.getElementById("pai").childNodes[7]
+        
+        document.getElementById("pai").removeChild(primeiro)
+        document.getElementById("pai").removeChild(segundo)
+        document.getElementById("pai").removeChild(terceiro)
+        
+        let primeirop= document.getElementById("elementoOndeVoceEsta").childNodes[3]
+        let segundop= document.getElementById("elementoOndeVoceEsta").childNodes[5]
+
+        document.getElementById("elementoOndeVoceEsta").removeChild(primeirop)
+        document.getElementById("elementoOndeVoceEsta").removeChild(segundop)
+
+        console.log(
+            document.querySelector("#pai").childNodes,
+            document.querySelector("#elementoOndeVoceEsta").childNodes
+        )
+      </script>
+</body>
+</html>
+

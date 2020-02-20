@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id = "corpo">
+    <script>
+    let title = document.createElement("h1")
+
+    title.innerText="Exercício 4.5 - JavaScript DOM"
+    title.className = "title"
+      
+    let main = document.createElement("div")
+      
+    main.className = "main-content"
+    main.style.backgroundColor = "green"
+        
+    let center = document.createElement("div")
+
+    center.className = "center-content"
+
+    let left = document.createElement("div")
+
+    left.className = "left-content"
+
+    let right = document.createElement("div")
+
+    right.className = "right-content"
+    right.style.marginRight = "20%"
+
+    let paragraphcenter = document.createElement("p");
+
+    paragraphcenter.innerText="Olá"
+
+    let leftimg = document.createElement("img");
+
+    leftimg.src = "https://picsum.photos/200"
+    leftimg.className = "small-image"
+
+    let rightlist = document.createElement("ul");
+        rightlist.id= "right-list"
+
+    let one = document.createElement("li");
+    one.innerText = "um"
+    let two = document.createElement("li");
+    two.innerText = "dois"
+    let three = document.createElement("li");
+    three.innerText = "três"
+    let four = document.createElement("li");
+    four.innerText = "quatro"
+    let five = document.createElement("li");
+    five.innerText = "cinco"
+    let six = document.createElement("li");
+    six.innerText = "seis"
+    let seven = document.createElement("li");
+    seven.innerText = "sete"
+    let eight = document.createElement("li");
+    eight.innerText = "oito"
+    let nine = document.createElement("li");
+    nine.innerText = "nove"
+    let ten = document.createElement("li");
+    ten.innerText = "dez"
+
+    let subtitleone = document.createElement("h3")
+        subtitleone.innerText = "Titulo"
+        subtitleone.className = "description"
+    
+    let subtitletwo = document.createElement("h3")
+        subtitletwo.innerText = "Titulo"
+        subtitletwo.className = "description"
+    
+    let subtitlethree = document.createElement("h3")
+        subtitlethree.innerText = "Titulo"
+        subtitlethree.className = "description"
+    
+      document.getElementsByTagName("BODY")[0].appendChild(title)
+      document.getElementsByTagName("BODY")[0].appendChild(main)
+      document.querySelector(".main-content").appendChild(center)
+      document.querySelector(".main-content").appendChild(left)
+      document.querySelector(".main-content").appendChild(right)
+      document.getElementsByClassName("center-content")[0].appendChild(paragraphcenter)
+      document.getElementsByClassName("left-content")[0].appendChild(leftimg)
+      document.getElementsByClassName("right-content")[0].appendChild(rightlist)  
+      
+        document.getElementById("right-list").appendChild(one)
+        document.getElementById("right-list").appendChild(two)
+        document.getElementById("right-list").appendChild(three)
+        document.getElementById("right-list").appendChild(four)
+        document.getElementById("right-list").appendChild(five)
+        document.getElementById("right-list").appendChild(six)
+        document.getElementById("right-list").appendChild(seven)
+        document.getElementById("right-list").appendChild(eight)
+        document.getElementById("right-list").appendChild(nine)
+        document.getElementById("right-list").appendChild(ten)
+
+        document.querySelector(".main-content").appendChild(subtitleone)
+        document.querySelector(".main-content").appendChild(subtitletwo)
+        document.querySelector(".main-content").appendChild(subtitlethree)
+        document.getElementsByClassName("main-content")[0].removeChild(left)
+        document.getElementById("right-list").removeChild(nine)
+        document.getElementById("right-list").removeChild(ten)  
+    
+    </script>
+  </body>
+</html>
